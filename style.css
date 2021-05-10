@@ -14,6 +14,7 @@ header: Pacifico
 html{
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 body{
 	/*background: #eeeeee;*/
@@ -40,7 +41,6 @@ body{
 	background: -webkit-radial-gradient(circle at 0% 0%, rgba(205,255,234,1) 0%, rgba(107,240,184,1) 100%);
 	background: radial-gradient(circle at 0% 0%, rgba(205,255,234,1) 0%, rgba(107,240,184,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdffea",endColorstr="#6bf0b8",GradientType=1);
-	z-index: -1;
 }
 .header-container {
 	position: relative;
@@ -69,6 +69,7 @@ body{
 	min-height: 2em;
 }
 .header-button {
+	text-decoration: none;
 	display: block;
 	margin: 0 1vw;
 	flex: 1;
@@ -78,6 +79,10 @@ body{
 	background-color: rgb(0,0,0,0);
 	border: 0.1em solid #4D4D4D;
 	font-weight: 1000;
+	transition: 0.3s;
+}
+.header-button:hover {
+	background-color: rgb(255,255,255,0.2);
 }
 .scroll-down {
 	position: absolute;
@@ -147,7 +152,16 @@ body{
 /*about me*/
 .about-me {
 	display: block;
-	padding: 10vh;
+	padding: 0 0 200px 0px !important;
+}
+#about-me-title {
+	padding: 100px;
+	margin: 0;
+	position: relative;
+	font-family: 'Pacifico', cursive;
+	color: #4D4D4D;
+	font-size: 4vh;
+	letter-spacing: 0.04em;
 }
 .about-container {
 	display: flex;
@@ -162,38 +176,32 @@ body{
 	width: 20%;
 	padding: 0 5%;
 }
-.info-circle {
-	width: 5vw;
-	height: 5vw;
-	background-color: #000;
-}
 .about-info-img {
 	position: relative;
-	width: 125px;
+	width: 100px;
 }
 .about-info-title {
 	display: block;
 	width: 100%;
-	top: 5%;
-	padding: 0;
+	padding: 15px 0;
 	margin: 0;
 	position: relative;
 	font-family: 'Pacifico', cursive;
 	color: #4D4D4D;
-	font-size: 18pt;
-	letter-spacing: 0.04em;
+	font-size: 24pt;
+	letter-spacing: 0.035em;
 }
 .about-info-text {
 	display: block;
 	width: 100%;
-	top: 12.5%;
-	padding: 0;
+	top: 15%;
 	margin: 0;
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
 	color: #4D4D4D;
 	font-size: 12pt;
 	letter-spacing: 0.04em;
+	line-height: 1.3em;
 }
 #server {
 	position: absolute;
@@ -203,16 +211,77 @@ body{
 	left: 48vw;
 	animation: float 3s ease-in-out infinite; 
 }
-
-
+/*resume*/
+.resume {
+	display: block;
+	background-color: #4D4D4D;
+	padding: 0 0 150px 0px !important;
+}
+#resume-title {
+	padding: 100px 0 35px 0;
+	margin: 0;
+	position: relative;
+	font-family: 'Pacifico', cursive;
+	color: #FEFEFE;
+	font-size: 4vh;
+	letter-spacing: 0.04em;
+}
+.resumeBtn-container{
+	position: relative;
+	display: flex;
+	padding: 0;
+	margin: auto;
+}
+.resumeBtn {
+	text-decoration: none;
+	display: block;
+	margin: auto;
+	padding: 15px;
+	font-family: 'Montserrat', sans-serif;
+	color: #FEFEFE;
+	font-size: 2.5vh;
+	background-color: rgb(0,0,0,0);
+	border: 0.1em solid #FEFEFE;
+	font-weight: 1000;
+	transition: 0.3s;
+}
+.resumeBtn:hover {
+	background-color: rgb(255,255,255,0.1);
+	color: rgb(107,240,184);
+}
+/*contact*/
+.contact {
+	display: block;
+	padding: 0 0 150px 0px !important;
+	background-color: rgb(107,240,184);
+}
+#contact-title{
+	padding: 100px 0 35px 0;
+	margin: 0;
+	position: relative;
+	font-family: 'Pacifico', cursive;
+	color: #4D4D4D;
+	font-size: 4vh;
+	letter-spacing: 0.04em;
+}
+.contact-text{
+	display: block;
+	margin: auto;
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	color: #4D4D4D;
+	font-size: 20pt;
+	letter-spacing: 0.04em;
+	line-height: 1.3em;
+}
 
 /*footer*/
 .footer {
-	height: 50vh;
+	display: block;
+	padding: 50px 0px !important;
 	background-color: #4D4D4D;
 }
 .flaticon {
-	padding: 5%;
 	font-family: 'Montserrat', sans-serif;
 	color: #FAFAFA;
 }
@@ -250,8 +319,4 @@ body{
 	position: absolute;
 	border-radius: 100%;
 	transform: translate(-50%, -50%);
-}
-.line {
-	display: block;
-	position: absolute;
 }
